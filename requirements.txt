@@ -1,0 +1,6 @@
+twilio
+retry-requests
+PyYAML
+pandas
+gspread
+oauth2client
