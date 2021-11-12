@@ -1,0 +1,36 @@
+ALERTING:
+  # These are the settings for text alerting when a connection issue occurs
+  # Many times there are connection issues with the particle devices because they rely on wifi connections
+
+  # This setting determines how many failed loops can happen before a text message is sent
+  min_alerting_threshold: 10 # failed loops
+
+  # This setting determines how often alerts can be sent (in hours) to the phone number that is receiving alerts
+  max_alerting_frequency_hrs: 4 # hour between alerts
+
+COMMAND_OPTIONS:
+  # This setting determines how long the loop sleeps between runs, which also
+  # determines how often commands get sent to the thermostat
+  command_frequency_secs: 45
+
+DEVICES:
+  ROOMS:
+    1:
+      NAME: 'Main'
+      PARTICLE_ID: '[add your particle device id here]'
+    2:
+      NAME: 'Office'
+      PARTICLE_ID: '[add your particle device id here]'
+    3:
+      NAME: 'Bedroom'
+      PARTICLE_ID: '[add your particle device id here]'
+  THERMOSTAT:
+    PARTICLE_ID: '[add your particle device id here]'
+
+SETPOINT_OPTIONS:
+  setpoint_buffer_c: 0.15
+
+TIMEZONE: 'America/Denver'
+
+ROOM_SCHEDULE_SHEET:
+  sheet_id: '[add your google sheet id here]'
